@@ -143,5 +143,14 @@
     <!-- <link rel="modulepreload" href="chunk.js" /> -->
     <script src="polyfills.js" type="module"></script>
     <script src="main.js" type="module"></script>
+    <script>
+      // Update base href for localhost
+      if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+        const baseTag = document.querySelector('base');
+        if (baseTag) {
+          baseTag.setAttribute('href', '/');
+        }
+      }
+    </script>
   <link rel="modulepreload" href="chunk-FDERIQAA.js"><script src="polyfills-5CFQRCPP.js" type="module"></script><script src="main-XZJCNQFD.js" type="module"></script></body>
 </html>
